@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "02DF7468-5591-49C8-A6DA-30D799B2C23F"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFB735C3-F673-4A7F-9A6D-3FE435F7DBEA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "halfModalUsingLibrary/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "floatingPanel(_:layoutFor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6900B308-5668-420D-B066-4ACFB0A2DA6C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "halfModalUsingLibrary/MyFloatingPanelLayout.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "6900B308-5668-420D-B066-4ACFB0A2DA6C - a0d67639ef7cf5bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "halfModalUsingLibrary.MyFloatingPanelLayout.deinit"
+                  moduleName = "halfModalUsingLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nakamori/Pocke/HalfModalUsingLibraries/halfModalUsingLibrary/halfModalUsingLibrary/MyFloatingPanelLayout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "6900B308-5668-420D-B066-4ACFB0A2DA6C - 169fe98d2abd0704"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "halfModalUsingLibrary.MyFloatingPanelLayout.__deallocating_deinit"
+                  moduleName = "halfModalUsingLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nakamori/Pocke/HalfModalUsingLibraries/halfModalUsingLibrary/halfModalUsingLibrary/MyFloatingPanelLayout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "6900B308-5668-420D-B066-4ACFB0A2DA6C - bbccb06df515f798"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "halfModalUsingLibrary.MyFloatingPanelLayout.__allocating_init() -&gt; halfModalUsingLibrary.MyFloatingPanelLayout"
+                  moduleName = "halfModalUsingLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nakamori/Pocke/HalfModalUsingLibraries/halfModalUsingLibrary/halfModalUsingLibrary/MyFloatingPanelLayout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "6900B308-5668-420D-B066-4ACFB0A2DA6C - e268ad524cc34870"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "halfModalUsingLibrary.MyFloatingPanelLayout.init() -&gt; halfModalUsingLibrary.MyFloatingPanelLayout"
+                  moduleName = "halfModalUsingLibrary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nakamori/Pocke/HalfModalUsingLibraries/halfModalUsingLibrary/halfModalUsingLibrary/MyFloatingPanelLayout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

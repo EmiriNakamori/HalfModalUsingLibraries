@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CCA7FD3492B985F4ADAA3AC /* Pods_halfModalUsingLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D4BBE6A6CBC72B2C851FCF /* Pods_halfModalUsingLibrary.framework */; };
 		FDBE752A290940EC002BD46F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE7529290940EC002BD46F /* AppDelegate.swift */; };
 		FDBE752C290940EC002BD46F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE752B290940EC002BD46F /* SceneDelegate.swift */; };
 		FDBE752E290940EC002BD46F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE752D290940EC002BD46F /* ViewController.swift */; };
 		FDBE7531290940EC002BD46F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBE752F290940EC002BD46F /* Main.storyboard */; };
 		FDBE7533290940EE002BD46F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBE7532290940EE002BD46F /* Assets.xcassets */; };
 		FDBE7536290940EE002BD46F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBE7534290940EE002BD46F /* LaunchScreen.storyboard */; };
+		FDBE753E290946B6002BD46F /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE753D290946B6002BD46F /* BasketViewController.swift */; };
+		FDBE7540290950A3002BD46F /* MyFloatingPanelLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE753F290950A3002BD46F /* MyFloatingPanelLayout.swift */; };
+		FDBE754229096445002BD46F /* BasketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDBE754129096445002BD46F /* BasketViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03B1413A00428A042030BFFA /* Pods-halfModalUsingLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-halfModalUsingLibrary.debug.xcconfig"; path = "Target Support Files/Pods-halfModalUsingLibrary/Pods-halfModalUsingLibrary.debug.xcconfig"; sourceTree = "<group>"; };
+		24D4BBE6A6CBC72B2C851FCF /* Pods_halfModalUsingLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_halfModalUsingLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7284EF17EA56F37056180C79 /* Pods-halfModalUsingLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-halfModalUsingLibrary.release.xcconfig"; path = "Target Support Files/Pods-halfModalUsingLibrary/Pods-halfModalUsingLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		FDBE7526290940EC002BD46F /* halfModalUsingLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = halfModalUsingLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBE7529290940EC002BD46F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDBE752B290940EC002BD46F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		FDBE7532290940EE002BD46F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDBE7535290940EE002BD46F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDBE7537290940EE002BD46F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDBE753D290946B6002BD46F /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		FDBE753F290950A3002BD46F /* MyFloatingPanelLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFloatingPanelLayout.swift; sourceTree = "<group>"; };
+		FDBE754129096445002BD46F /* BasketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCA7FD3492B985F4ADAA3AC /* Pods_halfModalUsingLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		564FDFF10A31E81DB231EFAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24D4BBE6A6CBC72B2C851FCF /* Pods_halfModalUsingLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57AE08FA03CB1417F581D7A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03B1413A00428A042030BFFA /* Pods-halfModalUsingLibrary.debug.xcconfig */,
+				7284EF17EA56F37056180C79 /* Pods-halfModalUsingLibrary.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FDBE751D290940EC002BD46F = {
 			isa = PBXGroup;
 			children = (
 				FDBE7528290940EC002BD46F /* halfModalUsingLibrary */,
 				FDBE7527290940EC002BD46F /* Products */,
+				57AE08FA03CB1417F581D7A7 /* Pods */,
+				564FDFF10A31E81DB231EFAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +93,9 @@
 				FDBE7532290940EE002BD46F /* Assets.xcassets */,
 				FDBE7534290940EE002BD46F /* LaunchScreen.storyboard */,
 				FDBE7537290940EE002BD46F /* Info.plist */,
+				FDBE753D290946B6002BD46F /* BasketViewController.swift */,
+				FDBE754129096445002BD46F /* BasketViewController.xib */,
+				FDBE753F290950A3002BD46F /* MyFloatingPanelLayout.swift */,
 			);
 			path = halfModalUsingLibrary;
 			sourceTree = "<group>";
@@ -74,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDBE753A290940EE002BD46F /* Build configuration list for PBXNativeTarget "halfModalUsingLibrary" */;
 			buildPhases = (
+				AB72C6CDBCFBB76AEBE5C603 /* [CP] Check Pods Manifest.lock */,
 				FDBE7522290940EC002BD46F /* Sources */,
 				FDBE7523290940EC002BD46F /* Frameworks */,
 				FDBE7524290940EC002BD46F /* Resources */,
+				6780ACB9D1261C24BD4D5B81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,11 +162,54 @@
 			files = (
 				FDBE7536290940EE002BD46F /* LaunchScreen.storyboard in Resources */,
 				FDBE7533290940EE002BD46F /* Assets.xcassets in Resources */,
+				FDBE754229096445002BD46F /* BasketViewController.xib in Resources */,
 				FDBE7531290940EC002BD46F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6780ACB9D1261C24BD4D5B81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-halfModalUsingLibrary/Pods-halfModalUsingLibrary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-halfModalUsingLibrary/Pods-halfModalUsingLibrary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-halfModalUsingLibrary/Pods-halfModalUsingLibrary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB72C6CDBCFBB76AEBE5C603 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-halfModalUsingLibrary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FDBE7522290940EC002BD46F /* Sources */ = {
@@ -139,7 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDBE752E290940EC002BD46F /* ViewController.swift in Sources */,
+				FDBE7540290950A3002BD46F /* MyFloatingPanelLayout.swift in Sources */,
 				FDBE752A290940EC002BD46F /* AppDelegate.swift in Sources */,
+				FDBE753E290946B6002BD46F /* BasketViewController.swift in Sources */,
 				FDBE752C290940EC002BD46F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,6 +362,7 @@
 		};
 		FDBE753B290940EE002BD46F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03B1413A00428A042030BFFA /* Pods-halfModalUsingLibrary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +391,7 @@
 		};
 		FDBE753C290940EE002BD46F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7284EF17EA56F37056180C79 /* Pods-halfModalUsingLibrary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
