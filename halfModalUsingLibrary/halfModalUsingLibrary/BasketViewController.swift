@@ -9,8 +9,10 @@ import UIKit
 
 class BasketViewController: UIViewController {
 
+    
+
     override func viewDidLoad() {
-        view.backgroundColor = .blue
+        view.backgroundColor = UIColor(named: "basketColor")
 
     }
 

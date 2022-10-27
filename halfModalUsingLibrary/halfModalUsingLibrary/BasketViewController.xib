@@ -18,9 +18,23 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bP2-qk-DF4" customClass="BasketTopView" customModule="halfModalUsingLibrary" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="47" width="390" height="80"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="cVe-qk-vAh"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="140" y="21"/>
+            <constraints>
+                <constraint firstItem="bP2-qk-DF4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="N5d-Bf-btP"/>
+                <constraint firstItem="bP2-qk-DF4" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="erj-lW-lW2"/>
+                <constraint firstItem="bP2-qk-DF4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="voR-Te-oud"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="20.616113744075829"/>
         </view>
     </objects>
     <resources>
