@@ -8,12 +8,18 @@
 import UIKit
 
 class BasketViewController: UIViewController {
+    @IBOutlet weak var basketTopView: BasketTopView!
 
-    
+    private var selectingMedicines: [Medicine] = []
 
     override func viewDidLoad() {
         view.backgroundColor = UIColor(named: "basketColor")
 
+    }
+
+    func addMedicine(medicine: Medicine) {
+        selectingMedicines.append(medicine)
+        basketTopView.medicines = selectingMedicines
     }
 
 }

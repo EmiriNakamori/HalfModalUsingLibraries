@@ -12,6 +12,13 @@ final class BasketTopView: NibView {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+
+    var medicines: [Medicine]? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUp()
@@ -23,16 +30,49 @@ final class BasketTopView: NibView {
     }
 
     private func setUp() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
         collectionView.register(UINib(nibName: "BasketCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BasketCollectionViewCell")
+
     }
 }
 
 extension BasketTopView: UICollectionViewDataSource {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 
+        return medicines?.count ?? 0
+
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BasketCollectionViewCell", for: indexPath) as! BasketCollectionViewCell
+        let cellImageView = UIImage(named: "medicine1")
+        cell.imageView.image = cellImageView
+        cell.nameLabel.text = medicines?[indexPath.row].medicineName
+
+        return cell
     }
 }
+
+extension BasketTopView: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = 53.0
+        let height = 55.0
+        return CGSize(width: width, height: height)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+}
+
+

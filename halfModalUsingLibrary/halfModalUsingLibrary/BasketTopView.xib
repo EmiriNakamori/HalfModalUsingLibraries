@@ -16,15 +16,18 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="390" height="92"/>
+            <rect key="frame" x="0.0" y="0.0" width="464" height="82"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="y6E-pI-2sV">
-                    <rect key="frame" x="4" y="9" width="383" height="75"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="y6E-pI-2sV">
+                    <rect key="frame" x="12" y="22" width="440" height="55"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="Jfx-eh-PR1"/>
+                        <constraint firstAttribute="width" constant="440" id="NMZ-bL-ghk"/>
+                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9ql-Ga-kwA">
-                        <size key="itemSize" width="128" height="128"/>
+                        <size key="itemSize" width="128" height="0.0"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -33,10 +36,15 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="y6E-pI-2sV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="L3W-A1-hkC"/>
+                <constraint firstItem="y6E-pI-2sV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="p13-B8-jKk"/>
+                <constraint firstAttribute="bottom" secondItem="y6E-pI-2sV" secondAttribute="bottom" constant="5" id="rhn-8V-Nws"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="140" y="-246.6824644549763"/>
+            <point key="canvasLocation" x="196.92307692307691" y="-244.90521327014216"/>
         </view>
     </objects>
     <resources>

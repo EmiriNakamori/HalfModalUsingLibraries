@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8CCA7FD3492B985F4ADAA3AC /* Pods_halfModalUsingLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D4BBE6A6CBC72B2C851FCF /* Pods_halfModalUsingLibrary.framework */; };
+		FD22282A2910AC2A000D68C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2228292910AC2A000D68C7 /* ViewController.swift */; };
+		FD22282C2910B22E000D68C7 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD22282B2910B22E000D68C7 /* Medicine.swift */; };
+		FD6F0196290F75E500D1919B /* BasketBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F0195290F75E500D1919B /* BasketBottomView.swift */; };
+		FD6F0198290F760700D1919B /* BasketBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD6F0197290F760700D1919B /* BasketBottomView.xib */; };
 		FD83D3FF290A0FF700596AF4 /* BasketTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD83D3FE290A0FF700596AF4 /* BasketTopView.xib */; };
 		FD83D401290A100700596AF4 /* BasketTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83D400290A100700596AF4 /* BasketTopView.swift */; };
 		FD83D403290A157300596AF4 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83D402290A157200596AF4 /* NibView.swift */; };
@@ -15,7 +19,6 @@
 		FD83D407290A187700596AF4 /* BasketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD83D405290A187700596AF4 /* BasketCollectionViewCell.xib */; };
 		FDBE752A290940EC002BD46F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE7529290940EC002BD46F /* AppDelegate.swift */; };
 		FDBE752C290940EC002BD46F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE752B290940EC002BD46F /* SceneDelegate.swift */; };
-		FDBE752E290940EC002BD46F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE752D290940EC002BD46F /* ViewController.swift */; };
 		FDBE7531290940EC002BD46F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBE752F290940EC002BD46F /* Main.storyboard */; };
 		FDBE7533290940EE002BD46F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBE7532290940EE002BD46F /* Assets.xcassets */; };
 		FDBE7536290940EE002BD46F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBE7534290940EE002BD46F /* LaunchScreen.storyboard */; };
@@ -28,6 +31,10 @@
 		03B1413A00428A042030BFFA /* Pods-halfModalUsingLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-halfModalUsingLibrary.debug.xcconfig"; path = "Target Support Files/Pods-halfModalUsingLibrary/Pods-halfModalUsingLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 		24D4BBE6A6CBC72B2C851FCF /* Pods_halfModalUsingLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_halfModalUsingLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7284EF17EA56F37056180C79 /* Pods-halfModalUsingLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-halfModalUsingLibrary.release.xcconfig"; path = "Target Support Files/Pods-halfModalUsingLibrary/Pods-halfModalUsingLibrary.release.xcconfig"; sourceTree = "<group>"; };
+		FD2228292910AC2A000D68C7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD22282B2910B22E000D68C7 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
+		FD6F0195290F75E500D1919B /* BasketBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketBottomView.swift; sourceTree = "<group>"; };
+		FD6F0197290F760700D1919B /* BasketBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketBottomView.xib; sourceTree = "<group>"; };
 		FD83D3FE290A0FF700596AF4 /* BasketTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketTopView.xib; sourceTree = "<group>"; };
 		FD83D400290A100700596AF4 /* BasketTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTopView.swift; sourceTree = "<group>"; };
 		FD83D402290A157200596AF4 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
@@ -36,7 +43,6 @@
 		FDBE7526290940EC002BD46F /* halfModalUsingLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = halfModalUsingLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBE7529290940EC002BD46F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDBE752B290940EC002BD46F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FDBE752D290940EC002BD46F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDBE7530290940EC002BD46F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDBE7532290940EE002BD46F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDBE7535290940EE002BD46F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +104,7 @@
 			children = (
 				FDBE7529290940EC002BD46F /* AppDelegate.swift */,
 				FDBE752B290940EC002BD46F /* SceneDelegate.swift */,
-				FDBE752D290940EC002BD46F /* ViewController.swift */,
+				FD2228292910AC2A000D68C7 /* ViewController.swift */,
 				FDBE752F290940EC002BD46F /* Main.storyboard */,
 				FDBE7532290940EE002BD46F /* Assets.xcassets */,
 				FDBE7534290940EE002BD46F /* LaunchScreen.storyboard */,
@@ -111,6 +117,9 @@
 				FD83D400290A100700596AF4 /* BasketTopView.swift */,
 				FD83D404290A187700596AF4 /* BasketCollectionViewCell.swift */,
 				FD83D405290A187700596AF4 /* BasketCollectionViewCell.xib */,
+				FD6F0195290F75E500D1919B /* BasketBottomView.swift */,
+				FD6F0197290F760700D1919B /* BasketBottomView.xib */,
+				FD22282B2910B22E000D68C7 /* Medicine.swift */,
 			);
 			path = halfModalUsingLibrary;
 			sourceTree = "<group>";
@@ -176,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDBE7536290940EE002BD46F /* LaunchScreen.storyboard in Resources */,
+				FD6F0198290F760700D1919B /* BasketBottomView.xib in Resources */,
 				FDBE7533290940EE002BD46F /* Assets.xcassets in Resources */,
 				FD83D407290A187700596AF4 /* BasketCollectionViewCell.xib in Resources */,
 				FD83D3FF290A0FF700596AF4 /* BasketTopView.xib in Resources */,
@@ -234,13 +244,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD83D401290A100700596AF4 /* BasketTopView.swift in Sources */,
-				FDBE752E290940EC002BD46F /* ViewController.swift in Sources */,
 				FD83D406290A187700596AF4 /* BasketCollectionViewCell.swift in Sources */,
 				FDBE7540290950A3002BD46F /* MyFloatingPanelLayout.swift in Sources */,
+				FD22282A2910AC2A000D68C7 /* ViewController.swift in Sources */,
 				FDBE752A290940EC002BD46F /* AppDelegate.swift in Sources */,
 				FDBE753E290946B6002BD46F /* BasketViewController.swift in Sources */,
 				FDBE752C290940EC002BD46F /* SceneDelegate.swift in Sources */,
+				FD22282C2910B22E000D68C7 /* Medicine.swift in Sources */,
 				FD83D403290A157300596AF4 /* NibView.swift in Sources */,
+				FD6F0196290F75E500D1919B /* BasketBottomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

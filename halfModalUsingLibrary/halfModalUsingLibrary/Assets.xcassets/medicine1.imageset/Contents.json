@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "inp_icon_drug_otc.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -11,12 +11,12 @@ import FloatingPanel
 class ViewController: UIViewController {
 
     var fpc = FloatingPanelController()
+    let basketVC = BasketViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         fpc.delegate = self
-        let basketVC = BasketViewController()
         fpc.set(contentViewController: basketVC)
         fpc.addPanel(toParent: self)
 
@@ -43,6 +43,23 @@ class ViewController: UIViewController {
         fpc.move(to: .half, animated: true)
     }
 
+    @IBAction func tappedMedicineA(_ sender: Any) {
+
+        let medicineA = Medicine(id: "1", medicineName: "頭痛薬A")
+        basketVC.addMedicine(medicine: medicineA)
+    }
+
+    @IBAction func tappedMedicineB(_ sender: Any) {
+        let medicineB = Medicine(id: "2", medicineName: "頭痛薬B")
+        basketVC.addMedicine(medicine: medicineB)
+
+    }
+
+    @IBAction func tappedMedicineC(_ sender: Any) {
+        let medicineC = Medicine(id: "3", medicineName: "頭痛薬C")
+        basketVC.addMedicine(medicine: medicineC)
+
+    }
 
 }
 
