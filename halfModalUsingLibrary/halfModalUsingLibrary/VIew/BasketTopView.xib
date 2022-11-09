@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,11 +20,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="y6E-pI-2sV">
-                    <rect key="frame" x="12" y="22" width="440" height="55"/>
+                    <rect key="frame" x="14" y="22" width="436" height="55"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="55" id="Jfx-eh-PR1"/>
-                        <constraint firstAttribute="width" constant="440" id="NMZ-bL-ghk"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9ql-Ga-kwA">
                         <size key="itemSize" width="128" height="0.0"/>
@@ -37,14 +36,15 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="y6E-pI-2sV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="L3W-A1-hkC"/>
+                <constraint firstItem="y6E-pI-2sV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="14" id="L3W-A1-hkC"/>
+                <constraint firstAttribute="trailing" secondItem="y6E-pI-2sV" secondAttribute="trailing" constant="14" id="efJ-de-H70"/>
                 <constraint firstItem="y6E-pI-2sV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="p13-B8-jKk"/>
                 <constraint firstAttribute="bottom" secondItem="y6E-pI-2sV" secondAttribute="bottom" constant="5" id="rhn-8V-Nws"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="196.92307692307691" y="-244.90521327014216"/>
+            <point key="canvasLocation" x="196.92307692307691" y="-245.260663507109"/>
         </view>
     </objects>
     <resources>

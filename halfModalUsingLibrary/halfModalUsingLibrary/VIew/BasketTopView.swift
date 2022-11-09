@@ -7,17 +7,23 @@
 
 import UIKit
 
+protocol DeletedMedicineDelegate: AnyObject {
+    func deleteMedicine(basketMedicines: [BasketMedicine])
+}
+
 final class BasketTopView: NibView {
 
 
     @IBOutlet weak var collectionView: UICollectionView!
 
 
-    var medicines: [Medicine]? {
+    var basketMedicines: [BasketMedicine] = [] {
         didSet {
             collectionView.reloadData()
+            print("メディシンの中身", basketMedicines)
         }
     }
+    weak var delegate: DeletedMedicineDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,7 +46,7 @@ final class BasketTopView: NibView {
 extension BasketTopView: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return medicines?.count ?? 0
+        return basketMedicines.count
 
     }
 
@@ -48,10 +54,17 @@ extension BasketTopView: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BasketCollectionViewCell", for: indexPath) as! BasketCollectionViewCell
         let cellImageView = UIImage(named: "medicine1")
         cell.imageView.image = cellImageView
-        cell.nameLabel.text = medicines?[indexPath.row].medicineName
-
+        cell.nameLabel.text = basketMedicines[indexPath.row].medicineName
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        basketMedicines.remove(at: indexPath.row)
+        delegate?.deleteMedicine(basketMedicines: basketMedicines)
+        print("メディシンを消した", basketMedicines)
+
+    }
+
 }
 
 extension BasketTopView: UICollectionViewDelegateFlowLayout {

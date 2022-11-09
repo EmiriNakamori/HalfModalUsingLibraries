@@ -37,35 +37,51 @@ class ViewController: UIViewController {
         appearance.backgroundColor = .clear
 
         fpc.surfaceView.appearance = appearance
+
+    }
+
+    func moveHalfModal() {
+        fpc.move(to: .half, animated: true)
     }
 
     @IBAction func tappedButton(_ sender: Any) {
-        fpc.move(to: .half, animated: true)
+        moveHalfModal()
     }
 
     @IBAction func tappedMedicineA(_ sender: Any) {
 
-        let medicineA = Medicine(id: "1", medicineName: "頭痛薬A")
+        let medicineA = BasketMedicine(id: "1", medicineName: "頭痛薬A")
         basketVC.addMedicine(medicine: medicineA)
+        moveHalfModal()
     }
 
     @IBAction func tappedMedicineB(_ sender: Any) {
-        let medicineB = Medicine(id: "2", medicineName: "頭痛薬B")
+        let medicineB = BasketMedicine(id: "2", medicineName: "頭痛薬B")
         basketVC.addMedicine(medicine: medicineB)
-
+        moveHalfModal()
     }
 
     @IBAction func tappedMedicineC(_ sender: Any) {
-        let medicineC = Medicine(id: "3", medicineName: "頭痛薬C")
+        let medicineC = BasketMedicine(id: "3", medicineName: "頭痛薬C")
         basketVC.addMedicine(medicine: medicineC)
-
+        moveHalfModal()
     }
+
+
+
 
 }
 
 extension ViewController: FloatingPanelControllerDelegate {
     func floatingPanel(_ fpc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout {
         return MyFloatingPanelLayout()
+    }
+}
+
+extension ViewController: TappedOkButtonDelegate {
+    func tappedOkButton() {
+        // 痛み記録画面に遷移するコード書くよ
+        // 痛み記録画面にバスケットの中身の薬のデータ（例：drugNames = [頭痛薬A,頭痛薬B]）を送っておくよ
     }
 }
 
