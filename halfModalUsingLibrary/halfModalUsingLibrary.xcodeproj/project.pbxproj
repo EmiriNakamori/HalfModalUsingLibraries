@@ -106,8 +106,8 @@
 			children = (
 				FDBE753F290950A3002BD46F /* MyFloatingPanelLayout.swift */,
 				FD83D402290A157200596AF4 /* NibView.swift */,
-				FD83D3FE290A0FF700596AF4 /* BasketTopView.xib */,
 				FD83D400290A100700596AF4 /* BasketTopView.swift */,
+				FD83D3FE290A0FF700596AF4 /* BasketTopView.xib */,
 				FD83D405290A187700596AF4 /* BasketCollectionViewCell.xib */,
 				FD6F0195290F75E500D1919B /* BasketBottomView.swift */,
 				FD6F0197290F760700D1919B /* BasketBottomView.xib */,

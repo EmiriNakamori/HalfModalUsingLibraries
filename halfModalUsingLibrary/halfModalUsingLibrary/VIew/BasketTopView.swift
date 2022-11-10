@@ -11,6 +11,10 @@ protocol DeletedMedicineDelegate: AnyObject {
     func deleteMedicine(basketMedicines: [BasketMedicine])
 }
 
+protocol SendIsMultipleDelegate: AnyObject {
+    func sendIsMultiple(isMultiple: Bool)
+}
+
 final class BasketTopView: NibView {
 
 
@@ -20,10 +24,11 @@ final class BasketTopView: NibView {
     var basketMedicines: [BasketMedicine] = [] {
         didSet {
             collectionView.reloadData()
-            print("メディシンの中身", basketMedicines)
         }
     }
+    var isMultiple = false
     weak var delegate: DeletedMedicineDelegate?
+    weak var isMultipleDelegate: SendIsMultipleDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,7 +44,16 @@ final class BasketTopView: NibView {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "BasketCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BasketCollectionViewCell")
+    }
 
+    func sendIsMultipleValue() {
+        if basketMedicines.count > 1 {
+            isMultiple = true
+            isMultipleDelegate?.sendIsMultiple(isMultiple: isMultiple)
+        } else {
+            isMultiple = false
+            isMultipleDelegate?.sendIsMultiple(isMultiple: isMultiple)
+        }
     }
 }
 
@@ -87,5 +101,6 @@ extension BasketTopView: UICollectionViewDelegateFlowLayout {
         return 1
     }
 }
+
 
 

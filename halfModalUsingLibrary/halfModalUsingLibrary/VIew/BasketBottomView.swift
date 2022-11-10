@@ -17,34 +17,32 @@ final class BasketBottomView: NibView {
     @IBOutlet weak var medicineSetNameLabel: UILabel!
     weak var delegate: TappedOkButtonDelegate?
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setUp()
+    var isMultiple: Bool? {
+        didSet {
+            refreshView()
+        }
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setUp()
-    }
-    var isMultiple = false {
-        didSet {
-            chengeMedicineIconAndMedicineSetName(isMultiple: isMultiple)
-        }
+    override func layoutSubviews() {
+        refreshView()
+        super.layoutSubviews()
     }
 
     @IBAction func tappedOkButton(_ sender: Any) {
         delegate?.tappedOkButton()
     }
 
-    func setUp() {
-
+    func refreshView() {
+        chengeMedicineIconAndMedicineSetName(isMultiple: isMultiple ?? false)
     }
 
     func chengeMedicineIconAndMedicineSetName(isMultiple: Bool) {
-        print("複数か", isMultiple)
-        if isMultiple {
-            medicineImageView.image = UIImage(named: "inp_icon_drug_multi_16")
-            medicineSetNameLabel.text = "現在時刻"
+        if !isMultiple {
+            self.medicineImageView.image = UIImage(named: "medicine1")
+            self.medicineSetNameLabel.text = "単体の薬名"
+        } else {
+            self.medicineImageView.image = UIImage(named: "inp_icon_drug_multi_16")
+            self.medicineSetNameLabel.text = "現在時刻"
         }
     }
 

@@ -9,37 +9,31 @@ import UIKit
 
 class BasketViewController: UIViewController {
     @IBOutlet weak var basketTopView: BasketTopView!
-
-    var selectingMedicines: [BasketMedicine] = [] {
-        didSet {
-            notificationMultipleMedicine()
-        }
-    }
+    @IBOutlet weak var basketBottomView: BasketBottomView!
 
 
     override func viewDidLoad() {
         view.backgroundColor = UIColor(named: "basketColor")
         basketTopView.delegate = self
+        basketTopView.isMultipleDelegate = self
     }
 
     func addMedicine(medicine: BasketMedicine) {
-        selectingMedicines.append(medicine)
-        print("選択されたメディシンBascketVC", selectingMedicines)
-        basketTopView.basketMedicines = selectingMedicines
-    }
-
-    private func notificationMultipleMedicine() {
-        if selectingMedicines.count > 1{
-            let isMultiple = true
-            let basketBottomView = BasketBottomView()
-            basketBottomView.isMultiple = isMultiple
-        }
+        basketTopView.basketMedicines.append(medicine)
+        basketTopView.sendIsMultipleValue()
     }
 
 }
 
 extension BasketViewController: DeletedMedicineDelegate {
     func deleteMedicine(basketMedicines: [BasketMedicine]) {
-        self.selectingMedicines = basketMedicines
+        basketTopView.basketMedicines = basketMedicines
+        basketTopView.sendIsMultipleValue()
+    }
+}
+
+extension BasketViewController: SendIsMultipleDelegate {
+    func sendIsMultiple(isMultiple: Bool) {
+        basketBottomView.isMultiple = isMultiple
     }
 }
