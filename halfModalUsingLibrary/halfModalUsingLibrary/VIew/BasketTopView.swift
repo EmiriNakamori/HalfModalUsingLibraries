@@ -8,11 +8,11 @@
 import UIKit
 
 protocol DeletedMedicineDelegate: AnyObject {
-    func deleteMedicine(basketMedicines: [BasketMedicine])
+    func deleteMedicines(basketMedicines: [BasketMedicine])
 }
 
-protocol SendIsMultipleDelegate: AnyObject {
-    func sendIsMultiple(isMultiple: Bool)
+protocol SendMedicinesDelegate: AnyObject {
+    func sendMedicines(basketMedicines: [BasketMedicine])
 }
 
 final class BasketTopView: NibView {
@@ -26,9 +26,8 @@ final class BasketTopView: NibView {
             collectionView.reloadData()
         }
     }
-    var isMultiple = false
-    weak var delegate: DeletedMedicineDelegate?
-    weak var isMultipleDelegate: SendIsMultipleDelegate?
+    weak var deleteMedicineDelegate: DeletedMedicineDelegate?
+    weak var sendMedicinesDelegate: SendMedicinesDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,13 +46,7 @@ final class BasketTopView: NibView {
     }
 
     func sendIsMultipleValue() {
-        if basketMedicines.count > 1 {
-            isMultiple = true
-            isMultipleDelegate?.sendIsMultiple(isMultiple: isMultiple)
-        } else {
-            isMultiple = false
-            isMultipleDelegate?.sendIsMultiple(isMultiple: isMultiple)
-        }
+        sendMedicinesDelegate?.sendMedicines(basketMedicines: basketMedicines)
     }
 }
 
@@ -74,7 +67,7 @@ extension BasketTopView: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         basketMedicines.remove(at: indexPath.row)
-        delegate?.deleteMedicine(basketMedicines: basketMedicines)
+        deleteMedicineDelegate?.deleteMedicines(basketMedicines: basketMedicines)
         print("メディシンを消した", basketMedicines)
 
     }

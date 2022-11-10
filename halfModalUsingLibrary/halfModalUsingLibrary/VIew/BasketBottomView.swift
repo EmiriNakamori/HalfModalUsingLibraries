@@ -17,7 +17,7 @@ final class BasketBottomView: NibView {
     @IBOutlet weak var medicineSetNameLabel: UILabel!
     weak var delegate: TappedOkButtonDelegate?
 
-    var isMultiple: Bool? {
+    var basketMedicines: [BasketMedicine] = [] {
         didSet {
             refreshView()
         }
@@ -33,18 +33,21 @@ final class BasketBottomView: NibView {
     }
 
     func refreshView() {
-        chengeMedicineIconAndMedicineSetName(isMultiple: isMultiple ?? false)
+        chengeMedicineIconAndMedicineSetName(basketMedicines: basketMedicines)
     }
 
-    func chengeMedicineIconAndMedicineSetName(isMultiple: Bool) {
-        if !isMultiple {
-            self.medicineImageView.image = UIImage(named: "medicine1")
-            self.medicineSetNameLabel.text = "単体の薬名"
+    func chengeMedicineIconAndMedicineSetName(basketMedicines: [BasketMedicine]) {
+        if basketMedicines.count == 0 {
+            // バスケットを下げる
+        } else if basketMedicines.count == 1 {
+            medicineImageView.image = UIImage(named: "medicine1")
+            medicineSetNameLabel.text = "単体の薬名"
+
         } else {
-            self.medicineImageView.image = UIImage(named: "inp_icon_drug_multi_16")
-            self.medicineSetNameLabel.text = "現在時刻"
+            medicineImageView.image = UIImage(named: "inp_icon_drug_multi_16")
+            medicineSetNameLabel.text = "現在時刻"
         }
-    }
 
+    }
 
 }

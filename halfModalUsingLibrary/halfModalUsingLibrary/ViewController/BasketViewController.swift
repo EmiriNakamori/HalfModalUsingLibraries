@@ -7,15 +7,17 @@
 
 import UIKit
 
-class BasketViewController: UIViewController {
+class BasketViewController: UIViewController
+{
+
     @IBOutlet weak var basketTopView: BasketTopView!
     @IBOutlet weak var basketBottomView: BasketBottomView!
 
 
     override func viewDidLoad() {
         view.backgroundColor = UIColor(named: "basketColor")
-        basketTopView.delegate = self
-        basketTopView.isMultipleDelegate = self
+        basketTopView.deleteMedicineDelegate = self
+        basketTopView.sendMedicinesDelegate = self
     }
 
     func addMedicine(medicine: BasketMedicine) {
@@ -26,14 +28,15 @@ class BasketViewController: UIViewController {
 }
 
 extension BasketViewController: DeletedMedicineDelegate {
-    func deleteMedicine(basketMedicines: [BasketMedicine]) {
+
+    func deleteMedicines(basketMedicines: [BasketMedicine]) {
         basketTopView.basketMedicines = basketMedicines
         basketTopView.sendIsMultipleValue()
     }
 }
 
-extension BasketViewController: SendIsMultipleDelegate {
-    func sendIsMultiple(isMultiple: Bool) {
-        basketBottomView.isMultiple = isMultiple
+extension BasketViewController: SendMedicinesDelegate {
+    func sendMedicines(basketMedicines: [BasketMedicine]) {
+        basketBottomView.basketMedicines = basketMedicines
     }
 }
