@@ -73,6 +73,9 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="Icon_favorite_off" title=""/>
+                    <connections>
+                        <action selector="tappedFavoriteButton:" destination="-1" eventType="touchUpInside" id="5AA-Dk-Ubf"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

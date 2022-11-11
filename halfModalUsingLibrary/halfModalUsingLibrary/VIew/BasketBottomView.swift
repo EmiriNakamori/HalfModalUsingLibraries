@@ -32,6 +32,8 @@ final class BasketBottomView: NibView {
         }
     }
 
+    var isFavorite = false
+
     @IBAction func tappedOkButton(_ sender: Any) {
         delegateTappedOkButton?.tappedOkButton()
     }
@@ -47,11 +49,34 @@ final class BasketBottomView: NibView {
         } else if basketMedicines.count == 1 {
             medicineImageView.image = UIImage(named: "medicine1")
             medicineSetNameLabel.text = basketMedicines[0].medicineName
+            editButton.isHidden = true
+            favoriteButton.isHidden = true
         } else {
             medicineImageView.image = UIImage(named: "inp_icon_drug_multi_16")
             medicineSetNameLabel.text = "現在時刻"
+            editButton.isHidden = false
+            favoriteButton.isHidden = false
+            setFavoriteOn(isFavorite: isFavorite)
         }
 
+    }
+
+    func setFavoriteOn(isFavorite: Bool) {
+        if isFavorite {
+            let offFavoriteImage = UIImage(named: "Icon_favorite_on")
+            favoriteButton.setImage(offFavoriteImage, for: UIControl.State())
+            editButton.isHidden = false
+        } else {
+            let onFavoriteImage = UIImage(named: "Icon_favorite_off")
+            favoriteButton.setImage(onFavoriteImage, for: UIControl.State())
+        }
+        editButton.isHidden = true
+
+    }
+
+
+    @IBAction func tappedFavoriteButton(_ sender: Any) {
+        
     }
 
 }
