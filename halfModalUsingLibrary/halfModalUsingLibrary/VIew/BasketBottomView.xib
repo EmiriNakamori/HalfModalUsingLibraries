@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BasketBottomView" customModule="halfModalUsingLibrary" customModuleProvider="target">
             <connections>
+                <outlet property="editButton" destination="tPR-aV-lJ3" id="JXP-OE-IdH"/>
+                <outlet property="favoriteButton" destination="RxZ-3D-0jb" id="iQ4-9r-Jdx"/>
                 <outlet property="medicineImageView" destination="tyS-Gd-zbb" id="pyQ-6X-pzi"/>
                 <outlet property="medicineSetNameLabel" destination="Xed-q7-pBW" id="wZM-ER-6MZ"/>
             </connections>

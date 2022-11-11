@@ -15,6 +15,10 @@ protocol SendMedicinesDelegate: AnyObject {
     func sendMedicines(basketMedicines: [BasketMedicine])
 }
 
+protocol SendViewHeightDelegate: AnyObject {
+    func sendViewHeight(height: CGFloat)
+}
+
 final class BasketTopView: NibView {
 
 
@@ -26,6 +30,7 @@ final class BasketTopView: NibView {
             collectionView.reloadData()
         }
     }
+    weak var sendViewHeightDelegate: SendViewHeightDelegate?
     weak var deleteMedicineDelegate: DeletedMedicineDelegate?
     weak var sendMedicinesDelegate: SendMedicinesDelegate?
 
@@ -43,9 +48,10 @@ final class BasketTopView: NibView {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "BasketCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BasketCollectionViewCell")
+        sendViewHeightDelegate?.sendViewHeight(height: view.bounds.height)
     }
 
-    func sendIsMultipleValue() {
+    func sendMedicinesValue() {
         sendMedicinesDelegate?.sendMedicines(basketMedicines: basketMedicines)
     }
 }

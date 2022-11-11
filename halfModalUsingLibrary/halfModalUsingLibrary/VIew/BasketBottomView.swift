@@ -11,11 +11,20 @@ protocol TappedOkButtonDelegate: AnyObject {
     func tappedOkButton()
 }
 
+protocol MoveFloatingPanelDelegate: AnyObject {
+    func moveDownPanel()
+    func controlPanel()
+}
+
 final class BasketBottomView: NibView {
 
     @IBOutlet weak var medicineImageView: UIImageView!
     @IBOutlet weak var medicineSetNameLabel: UILabel!
-    weak var delegate: TappedOkButtonDelegate?
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
+
+    weak var delegateTappedOkButton: TappedOkButtonDelegate?
+    weak var delegateMoveFloatingPanel: MoveFloatingPanelDelegate?
 
     var basketMedicines: [BasketMedicine] = [] {
         didSet {
@@ -23,13 +32,8 @@ final class BasketBottomView: NibView {
         }
     }
 
-    override func layoutSubviews() {
-        refreshView()
-        super.layoutSubviews()
-    }
-
     @IBAction func tappedOkButton(_ sender: Any) {
-        delegate?.tappedOkButton()
+        delegateTappedOkButton?.tappedOkButton()
     }
 
     func refreshView() {
@@ -38,16 +42,35 @@ final class BasketBottomView: NibView {
 
     func chengeMedicineIconAndMedicineSetName(basketMedicines: [BasketMedicine]) {
         if basketMedicines.count == 0 {
-            // バスケットを下げる
+//            hideAllIcon()
+            delegateMoveFloatingPanel?.moveDownPanel()
+            delegateMoveFloatingPanel?.controlPanel()
         } else if basketMedicines.count == 1 {
+            showAllIcon()
             medicineImageView.image = UIImage(named: "medicine1")
-            medicineSetNameLabel.text = "単体の薬名"
-
+            medicineSetNameLabel.text = basketMedicines[0].medicineName
         } else {
+            showAllIcon()
             medicineImageView.image = UIImage(named: "inp_icon_drug_multi_16")
             medicineSetNameLabel.text = "現在時刻"
         }
 
+    }
+
+    private func hideAllIcon() {
+        view.backgroundColor = .white
+        medicineImageView.isHidden = true
+        medicineSetNameLabel.isHidden = true
+        editButton.isHidden = true
+        favoriteButton.isHidden = true
+    }
+
+    private func showAllIcon() {
+        view.backgroundColor = UIColor(named: "basketColor")
+        medicineImageView.isHidden = false
+        medicineSetNameLabel.isHidden = false
+        editButton.isHidden = false
+        favoriteButton.isHidden = false
     }
 
 }
