@@ -8,7 +8,6 @@
 import FloatingPanel
 
 class MyFloatingPanelLayout: FloatingPanelLayout {
-    var basketTopViewHeight: CGFloat? = 0.0
     let position: FloatingPanelPosition = .bottom
     let initialState: FloatingPanelState = .tip
 
@@ -17,10 +16,4 @@ class MyFloatingPanelLayout: FloatingPanelLayout {
         .tip: FloatingPanelLayoutAnchor(absoluteInset: 82.0, edge: .bottom, referenceGuide: .superview)
     ]
 
-}
-
-extension MyFloatingPanelLayout: SendViewHeightDelegate {
-    func sendViewHeight(height: CGFloat) {
-        self.basketTopViewHeight = height
-    }
 }

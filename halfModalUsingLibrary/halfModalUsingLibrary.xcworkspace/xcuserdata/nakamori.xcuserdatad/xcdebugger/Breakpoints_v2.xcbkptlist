@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2126D01F-081D-444F-9F99-DC16D73B1B7C"
+            uuid = "63F4B26C-7E46-472A-BB88-C40D46CEF911"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "halfModalUsingLibrary/ViewController/ViewController.swift"
+            filePath = "halfModalUsingLibrary/VIew/CustomPanelBehavior.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "controlModal()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BFFABBF1-48D4-4562-8A02-98F8B69007FC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "halfModalUsingLibrary/VIew/BasketBottomView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "chengeMedicineIconAndMedicineSetName(basketMedicines:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "floatingPanelDidMove(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

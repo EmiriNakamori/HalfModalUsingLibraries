@@ -93,6 +93,13 @@ extension ViewController: FloatingPanelControllerDelegate {
     func floatingPanel(_ fpc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout {
         return MyFloatingPanelLayout()
     }
+
+    func floatingPanelDidMove(_ vc: FloatingPanelController) {
+            let loc = vc.surfaceLocation
+            let minY = vc.surfaceLocation(for: .half).y
+            let maxY = vc.surfaceLocation(for: .tip).y
+            vc.surfaceLocation = CGPoint(x: loc.x, y: min(max(loc.y, minY), maxY))
+    }
 }
 
 extension ViewController: TappedOkButtonDelegate {

@@ -51,7 +51,6 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="0mS-aD-A7V" secondAttribute="bottom" id="6NQ-0m-PuS"/>
                 <constraint firstItem="bP2-qk-DF4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IYY-ze-F8X"/>
                 <constraint firstItem="0mS-aD-A7V" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LAI-0e-Wa8"/>
                 <constraint firstAttribute="trailing" secondItem="bP2-qk-DF4" secondAttribute="trailing" id="R2X-hL-ZGY"/>
