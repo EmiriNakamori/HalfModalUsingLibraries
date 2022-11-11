@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         appearance.backgroundColor = .clear
         fpc.surfaceView.appearance = appearance
 
-        controlTipModal()
+        controlModal()
     }
 
     func moveTipModal() {
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         fpc.move(to: .half, animated: true)
     }
 
-    func controlTipModal() {
+    func controlModal() {
         fpc.panGestureRecognizer.isEnabled = false
     }
 
@@ -107,7 +107,7 @@ extension ViewController: MoveFloatingPanelDelegate {
         moveTipModal()
     }
     func controlPanel() {
-        controlTipModal()
+        controlModal()
     }
 }
 

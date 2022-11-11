@@ -42,35 +42,16 @@ final class BasketBottomView: NibView {
 
     func chengeMedicineIconAndMedicineSetName(basketMedicines: [BasketMedicine]) {
         if basketMedicines.count == 0 {
-//            hideAllIcon()
             delegateMoveFloatingPanel?.moveDownPanel()
             delegateMoveFloatingPanel?.controlPanel()
         } else if basketMedicines.count == 1 {
-            showAllIcon()
             medicineImageView.image = UIImage(named: "medicine1")
             medicineSetNameLabel.text = basketMedicines[0].medicineName
         } else {
-            showAllIcon()
             medicineImageView.image = UIImage(named: "inp_icon_drug_multi_16")
             medicineSetNameLabel.text = "現在時刻"
         }
 
-    }
-
-    private func hideAllIcon() {
-        view.backgroundColor = .white
-        medicineImageView.isHidden = true
-        medicineSetNameLabel.isHidden = true
-        editButton.isHidden = true
-        favoriteButton.isHidden = true
-    }
-
-    private func showAllIcon() {
-        view.backgroundColor = UIColor(named: "basketColor")
-        medicineImageView.isHidden = false
-        medicineSetNameLabel.isHidden = false
-        editButton.isHidden = false
-        favoriteButton.isHidden = false
     }
 
 }
