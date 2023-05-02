@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     func setUp() {
         setFloatingPanel()
         layoutBasket()
+        print("testA")
     }
 
     func setFloatingPanel() {
