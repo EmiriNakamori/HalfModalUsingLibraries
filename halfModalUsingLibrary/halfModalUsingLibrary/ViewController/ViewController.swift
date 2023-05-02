@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 
         print("testA")
         print("testB")
+        print("testB2")
     }
 
     func setUp() {
